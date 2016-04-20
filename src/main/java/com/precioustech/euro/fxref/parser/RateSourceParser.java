@@ -7,5 +7,5 @@ import com.precioustech.euro.fxref.entities.EuroRate;
 
 public interface RateSourceParser {
 	
-	List<EuroRate> parse(String payLoad) throws ParseException;
+	List<EuroRate> parse(String uri) throws ParseException;
 }
