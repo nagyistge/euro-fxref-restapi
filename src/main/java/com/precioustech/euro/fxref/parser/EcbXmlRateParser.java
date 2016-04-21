@@ -3,7 +3,6 @@ package com.precioustech.euro.fxref.parser;
 import java.net.URL;
 import java.net.URLConnection;
 import java.text.ParseException;
-
 import java.util.List;
 
 import javax.xml.parsers.DocumentBuilder;
@@ -51,7 +50,7 @@ public class EcbXmlRateParser implements RateSourceParser {
 					String refDateStr = attrTime.getValue();
 					LocalDate localDate = LocalDate.parse(refDateStr);
 					refDate = new DateTime(localDate.toDate().getTime());
-				} else if (attributeMap.getNamedItem(ATTR_CCY) != null) {
+				} else if (attributeMap.getNamedItem(ATTR_CCY) != null && refDate != null) {
 					Attr attrCcy = (Attr) attributeMap.getNamedItem(ATTR_CCY);
 					Attr attrRate = (Attr) attributeMap.getNamedItem(ATTR_RATE);
 					rates.add(new EuroRate(attrCcy.getValue(), 
