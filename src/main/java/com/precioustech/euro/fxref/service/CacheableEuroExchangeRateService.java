@@ -84,6 +84,7 @@ public class CacheableEuroExchangeRateService implements EuroExchangeRateService
 	@Override
 	public Double getRate(String currency) {
 		Lock readLock = this.lock.readLock();
+		readLock.lock();
 		try {
 			return this.currRatesCache.get(currency);
 		} finally {

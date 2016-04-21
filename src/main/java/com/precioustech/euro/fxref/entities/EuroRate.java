@@ -1,13 +1,18 @@
 package com.precioustech.euro.fxref.entities;
 
 
+
+
 import org.joda.time.DateTime;
 import org.joda.time.LocalDate;
+
+import com.fasterxml.jackson.annotation.JsonFormat;
 
 public class EuroRate {
 	
 	private final  String currency;
 	private final Double rate;
+	@JsonFormat(shape=JsonFormat.Shape.STRING, pattern="YYYY-MM-dd")
 	private final DateTime referenceDate;
 	private final String strRepresentation;
 	
@@ -19,7 +24,7 @@ public class EuroRate {
 	}
 
 	public EuroRate(String currency, Double rate) {
-		this(currency,rate, new DateTime(LocalDate.now()));
+		this(currency,rate, new DateTime(LocalDate.now().toDate().getTime()));
 	}
 	
 	public String getCurrency() {
