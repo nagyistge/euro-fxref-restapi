@@ -12,6 +12,7 @@ import javax.xml.parsers.DocumentBuilderFactory;
 import org.apache.log4j.Logger;
 import org.joda.time.DateTime;
 import org.joda.time.LocalDate;
+import org.springframework.stereotype.Component;
 import org.w3c.dom.Attr;
 import org.w3c.dom.Document;
 import org.w3c.dom.NamedNodeMap;
@@ -21,6 +22,7 @@ import org.w3c.dom.NodeList;
 import com.google.common.collect.Lists;
 import com.precioustech.euro.fxref.entities.EuroRate;
 
+@Component
 public class EcbXmlRateParser implements RateSourceParser {
 
 	private static final String TAG_CUBE = "Cube";
