@@ -1,4 +1,4 @@
-package com.precioustech.euro.fxref.parser.controllers;
+package com.precioustech.euro.fxref.controllers;
 
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.when;
