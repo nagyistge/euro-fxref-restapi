@@ -12,7 +12,7 @@ public class EuroRate {
 	
 	private final  String currency;
 	private final Double rate;
-	@JsonFormat(shape=JsonFormat.Shape.STRING, pattern="YYYY-MM-dd")
+	@JsonFormat(shape=JsonFormat.Shape.STRING, pattern="YYYY-MM-dd", timezone="CET")
 	private final DateTime referenceDate;
 	private final String strRepresentation;
 	
