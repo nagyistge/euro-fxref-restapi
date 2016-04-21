@@ -1,5 +1,11 @@
 # Euro Live and Historic Cross Rates RESTful service
-A demo SpringBoot project that that implements a RESTful service to return EURO exchange rate versus a given currency going back as far as 90 days. The service currently consumes xml feed from the European Central Bank (ECB) resource: http://www.ecb.europa.eu/stats/exchange/eurofxref/html/index.en.html
+A demo SpringBoot project that implements a RESTful service to return EURO exchange rate versus a given currency going back as far as 90 days. The service currently consumes xml feed from the European Central Bank (ECB) resource: http://www.ecb.europa.eu/stats/exchange/eurofxref/html/index.en.html
+
+### Running the app on command line
+```
+mvn spring-boot:run
+```
+
 
 ### To Fetch Live Rates
 ```
